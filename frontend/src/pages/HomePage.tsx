@@ -1,5 +1,5 @@
 import React from 'react';
-import { useWeb3 } from '../context/Web3Context';
+import { useWeb3 } from '../context/Web3Context-full';
 import WalletConnection from '../components/WalletConnection';
 import KittyCard from '../components/KittyCard';
 

@@ -1,15 +1,5 @@
 import React from 'react';
-import {  const forceRefresh = async () => {
-    console.log('🔄 Force refresh triggered');
-    setDebugInfo(null);
-    try {
-      await refreshKitties();
-      const timestamp = new Date().toLocaleTimeString();
-      console.log(`✅ Force refresh completed at ${timestamp}`);
-    } catch (error) {
-      console.error('❌ Force refresh error:', error);
-    }
-  }; from '../context/Web3Context-full';
+import { useWeb3 } from '../context/Web3Context-full';
 
 interface Kitty {
   tokenId: string;

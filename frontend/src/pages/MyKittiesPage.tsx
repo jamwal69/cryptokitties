@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useWeb3 } from '../context/Web3Context';
+import { useWeb3 } from '../context/Web3Context-full';
 import KittyCard from '../components/KittyCard';
 import WalletConnection from '../components/WalletConnection';
 
