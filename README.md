@@ -1,4 +1,6 @@
-# 🐱 CryptoKitties - Advanced Blockchain NFT Game
+# 🐱 Crypt**A complete blockchain-based NFT breeding game with advanced genetic algorithms, marketplace functionality, and battle system.**
+
+[🚀 Live Demo](https://cryptokitties-jamwal69.vercel.app) | [📖 Documentation](#-key-features) | [🎮 Try Now](https://cryptokitties-jamwal69.vercel.app)tties - Advanced Blockchain NFT Game
 
 <div align="center">
 
@@ -10,7 +12,7 @@
 
 **A complete blockchain-based NFT breeding game with advanced genetic algorithms, marketplace functionality, and battle system.**
 
-[🚀 Live Demo](#live-demo) | [📖 Documentation](#documentation) | [🎮 Try Now](#getting-started)
+[� Documentation](#-key-features) | [� Quick Start](#-quick-start) | [🎮 Game Features](#-game-features)
 
 </div>
 
@@ -73,7 +75,7 @@ This project demonstrates **advanced blockchain development skills** and impleme
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/jamwal69/cryptokitties.git
 cd "Crypto Kitties"
 
 # Install dependencies
@@ -274,21 +276,6 @@ Crypto Kitties/
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- OpenZeppelin for secure smart contract libraries
-- Hardhat for development framework
-- Polygon for scalable blockchain infrastructure
-- React and Tailwind communities for frontend tools
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the troubleshooting section
-2. Review existing GitHub issues
-3. Create a new issue with detailed information
-4. Join our community discussions
 
 ---
 
