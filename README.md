@@ -1,6 +1,4 @@
-# 🐱 Crypt**A complete blockchain-based NFT breeding game with advanced genetic algorithms, marketplace functionality, and battle system.**
-
-[🚀 Live Demo](https://cryptokitties-jamwal69.vercel.app) | [📖 Documentation](#-key-features) | [🎮 Try Now](https://cryptokitties-jamwal69.vercel.app)tties - Advanced Blockchain NFT Game
+# 🐱 CryptoKitties - Advanced Blockchain NFT Game
 
 <div align="center">
 
