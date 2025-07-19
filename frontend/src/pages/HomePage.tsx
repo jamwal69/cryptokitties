@@ -4,7 +4,7 @@ import WalletConnection from '../components/WalletConnection';
 import KittyCard from '../components/KittyCard';
 
 const HomePage: React.FC = () => {
-  const { isConnected, userKitties } = useWeb3();
+  const { account, userKitties } = useWeb3();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
               Each kitty is a one-of-a-kind NFT with special traits and abilities.
             </p>
             
-            {!isConnected ? (
+            {!account ? (
               <div className="max-w-md mx-auto">
                 <WalletConnection />
               </div>
@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
       </div>
 
       {/* User's Kitties Section */}
-      {isConnected && userKitties.length > 0 && (
+      {account && userKitties.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Your Kitties</h2>
@@ -144,7 +144,7 @@ const HomePage: React.FC = () => {
       </div>
 
       {/* Getting Started Section */}
-      {!isConnected && (
+      {!account && (
         <div className="bg-gradient-to-r from-primary-600 to-secondary-600 py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-white mb-8">Ready to Start?</h2>

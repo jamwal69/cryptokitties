@@ -4,12 +4,12 @@ import KittyCard from '../components/KittyCard';
 import WalletConnection from '../components/WalletConnection';
 
 const MyKittiesPage: React.FC = () => {
-  const { isConnected, userKitties, refreshData } = useWeb3();
+  const { account, userKitties, refreshKitties } = useWeb3();
   const [sortBy, setSortBy] = useState<'id' | 'generation' | 'rarity' | 'age'>('id');
   const [filterRarity, setFilterRarity] = useState<string>('all');
   const [selectedKitty, setSelectedKitty] = useState<any>(null);
 
-  if (!isConnected) {
+  if (!account) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
         <div className="max-w-md">
@@ -58,7 +58,7 @@ const MyKittiesPage: React.FC = () => {
               You own {userKitties.length} unique CryptoKitties
             </p>
             <button
-              onClick={refreshData}
+              onClick={refreshKitties}
               className="btn-secondary flex items-center space-x-2"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
