@@ -128,11 +128,12 @@ const App: React.FC = () => {
             </div>
           </nav>
 
-          {/* Main Content Container */}
-          <div style={{ 
-            maxWidth: '1400px', 
-            margin: '0 auto', 
-            padding: '0 2rem' 
+          {/* Main Content */}
+          <main style={{ 
+            padding: '0 2rem',
+            minHeight: 'calc(100vh - 200px)',
+            maxWidth: '1200px',
+            margin: '0 auto'
           }}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -141,7 +142,35 @@ const App: React.FC = () => {
               <Route path="/battle" element={<Battle />} />
               <Route path="/staking" element={<Staking />} />
             </Routes>
-          </div>
+          </main>
+
+          {/* Footer */}
+          <footer style={{
+            background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+            padding: '2rem',
+            textAlign: 'center',
+            color: '#333',
+            marginTop: '3rem',
+            borderTop: '1px solid #e0e0e0'
+          }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+              <p style={{ 
+                margin: 0, 
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                color: '#667eea'
+              }}>
+                🚀 Welcome to the Future of Digital Cats 🚀
+              </p>
+              <p style={{ 
+                margin: '0.5rem 0 0 0', 
+                fontSize: '0.9rem',
+                color: '#666'
+              }}>
+                Powered by Sepolia Testnet | Advanced Genetic Algorithms | Web3 Gaming
+              </p>
+            </div>
+          </footer>
         </div>
       </Router>
     </Web3Provider>

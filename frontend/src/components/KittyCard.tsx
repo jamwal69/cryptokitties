@@ -8,9 +8,9 @@ interface Kitty {
   lastBreedTime: number;
   matronId: string;
   sireId: string;
-  bodyColor: number;
-  eyeColor: number;
-  pattern: number;
+  bodyColor: string;
+  eyeColor: string;
+  pattern: string;
   accessory: number;
   background: number;
   hasSpecialTrait: boolean;
@@ -27,6 +27,19 @@ interface KittyCardProps {
   showDetails?: boolean;
   actionButton?: React.ReactNode;
 }
+
+// Helper functions to convert string names back to numeric values
+const getColorIndex = (colorName: string): number => {
+  const colorNames = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Pink', 'White'];
+  const index = colorNames.indexOf(colorName);
+  return index !== -1 ? index : 0;
+};
+
+const getPatternIndex = (patternName: string): number => {
+  const patternNames = ['Solid', 'Stripes', 'Spots', 'Gradient', 'Mixed'];
+  const index = patternNames.indexOf(patternName);
+  return index !== -1 ? index : 0;
+};
 
 const KittyCard: React.FC<KittyCardProps> = ({
   kitty,
@@ -72,9 +85,9 @@ const KittyCard: React.FC<KittyCardProps> = ({
       {/* Kitty Visualization */}
       <div className="flex justify-center p-4 bg-gradient-to-br from-blue-50 to-purple-50">
         <KittyVisualization
-          bodyColor={kitty.bodyColor}
-          eyeColor={kitty.eyeColor}
-          pattern={kitty.pattern}
+          bodyColor={getColorIndex(kitty.bodyColor)}
+          eyeColor={getColorIndex(kitty.eyeColor)}
+          pattern={getPatternIndex(kitty.pattern)}
           accessory={kitty.accessory}
           background={kitty.background}
           hasSpecialTrait={kitty.hasSpecialTrait}
