@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { ethers, BrowserProvider, Contract } from 'ethers';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
+import { BrowserProvider, Contract } from 'ethers';
 import addresses from '../contracts/addresses.json';
 
 // CryptoKitties ABI - matching the actual deployed contract
@@ -243,7 +243,7 @@ export const Web3Provider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }
   };
 
-  const refreshKitties = async () => {
+  const refreshKitties = useCallback(async () => {
     if (!contract || !account) {
       console.log('❌ Cannot refresh kitties: missing contract or account');
       return;
@@ -297,7 +297,7 @@ export const Web3Provider: React.FC<{ children: ReactNode }> = ({ children }) =>
     } finally {
       setLoading(false);
     }
-  };
+  }, [contract, account]);
 
   const mintKitty = async () => {
     if (!contract || !account) {
@@ -364,7 +364,7 @@ export const Web3Provider: React.FC<{ children: ReactNode }> = ({ children }) =>
     } else {
       console.log('❌ Missing account or contract:', { account: !!account, contract: !!contract });
     }
-  }, [account, contract]);
+  }, [account, contract, refreshKitties]);
 
   // Check for existing connection on load
   useEffect(() => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Web3Provider } from './context/Web3Context-full';
-import Home from './pages/Home-simple';
-import MyKitties from './pages/MyKitties-simple';
+import Home from './pages/HomePage';
+import MyKitties from './pages/MyKittiesPage';
 import Marketplace from './pages/Marketplace';
 import Battle from './pages/Battle';
 import Staking from './pages/Staking';
