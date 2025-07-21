@@ -1,4 +1,4 @@
-# 🚀 CryptoKitties Deployment Guide
+# 🚀 DigiCats Deployment Guide
 
 ## Prerequisites ✅
 
@@ -66,7 +66,7 @@ npm run deploy:mumbai
 
 This will deploy all 5 contracts:
 - ✅ KittyToken (ERC-20)
-- ✅ CryptoKitties (ERC-721 with genetics)
+- ✅ DigiCats (ERC-721 with genetics)
 - ✅ KittyMarketplace (Trading platform)
 - ✅ KittyBattle (Combat system)
 - ✅ KittyStaking (Reward system)
@@ -206,4 +206,4 @@ Your deployment is successful when you can:
 
 ---
 
-**🎉 You're ready to deploy and demonstrate your CryptoKitties game with its advanced genetic algorithm!**
+**🎉 You're ready to deploy and demonstrate your DigiCats game with its advanced genetic algorithm!**

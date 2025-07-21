@@ -3,15 +3,15 @@ pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./CryptoKitties.sol";
+import "./DigiCats.sol";
 import "./KittyToken.sol";
 
 /**
  * @title KittyBattle
- * @dev Battle system for CryptoKitties with turn-based combat
+ * @dev Battle system for DigiCats with turn-based combat
  */
 contract KittyBattle is ReentrancyGuard, Ownable {
-    CryptoKitties public cryptoKitties;
+    DigiCats public digiCats;
     KittyToken public kittyToken;
     
     uint256 public constant BATTLE_ENTRY_FEE = 5 * 10**18; // 5 KITTY tokens
@@ -100,8 +100,8 @@ contract KittyBattle is ReentrancyGuard, Ownable {
         uint256 timestamp
     );
     
-    constructor(address _cryptoKittiesAddress, address _kittyTokenAddress) Ownable(msg.sender) {
-        cryptoKitties = CryptoKitties(_cryptoKittiesAddress);
+    constructor(address _digiCatsAddress, address _kittyTokenAddress) Ownable(msg.sender) {
+        digiCats = DigiCats(_digiCatsAddress);
         kittyToken = KittyToken(_kittyTokenAddress);
         _battleIdCounter = 1;
     }
@@ -110,7 +110,7 @@ contract KittyBattle is ReentrancyGuard, Ownable {
      * @dev Create a new battle challenge
      */
     function createBattle(uint256 kittyId) external nonReentrant {
-        require(cryptoKitties.ownerOf(kittyId) == msg.sender, "Not the owner");
+        require(digiCats.ownerOf(kittyId) == msg.sender, "Not the owner");
         require(!kittyInBattle[kittyId], "Kitty already in battle");
         require(
             kittyToken.balanceOf(msg.sender) >= BATTLE_ENTRY_FEE,
@@ -126,7 +126,7 @@ contract KittyBattle is ReentrancyGuard, Ownable {
         uint256 battleId = _battleIdCounter++;
         
         // Get kitty stats
-        CryptoKitties.Kitty memory kitty = cryptoKitties.getKitty(kittyId);
+        digiCats.Kitty memory kitty = digiCats.getKitty(kittyId);
         BattleStats memory challengerStats = _generateBattleStats(kitty);
         
         battles[battleId] = Battle({
@@ -158,7 +158,7 @@ contract KittyBattle is ReentrancyGuard, Ownable {
     function joinBattle(uint256 battleId, uint256 kittyId) external nonReentrant {
         require(battles[battleId].state == BattleState.Pending, "Battle not available");
         require(battles[battleId].challenger != msg.sender, "Cannot join your own battle");
-        require(cryptoKitties.ownerOf(kittyId) == msg.sender, "Not the owner");
+        require(digiCats.ownerOf(kittyId) == msg.sender, "Not the owner");
         require(!kittyInBattle[kittyId], "Kitty already in battle");
         require(
             kittyToken.balanceOf(msg.sender) >= BATTLE_ENTRY_FEE,
@@ -174,7 +174,7 @@ contract KittyBattle is ReentrancyGuard, Ownable {
         Battle storage battle = battles[battleId];
         
         // Get kitty stats
-        CryptoKitties.Kitty memory kitty = cryptoKitties.getKitty(kittyId);
+        digiCats.Kitty memory kitty = digiCats.getKitty(kittyId);
         BattleStats memory opponentStats = _generateBattleStats(kitty);
         
         battle.opponent = msg.sender;
@@ -265,7 +265,7 @@ contract KittyBattle is ReentrancyGuard, Ownable {
     /**
      * @dev Generate battle stats from kitty genetics
      */
-    function _generateBattleStats(CryptoKitties.Kitty memory kitty) 
+    function _generateBattleStats(digiCats.Kitty memory kitty) 
         internal 
         pure 
         returns (BattleStats memory) 

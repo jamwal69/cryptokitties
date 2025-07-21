@@ -1,8 +1,8 @@
-# 🐱 CryptoKitties - Advanced Blockchain NFT Game
+# 🐱 DigiCats - Advanced Blockchain NFT Game
 
 <div align="center">
 
-![CryptoKitties Logo](https://img.shields.io/badge/CryptoKitties-NFT%20Game-purple?style=for-the-badge&logo=ethereum)
+![DigiCats Logo](https://img.shields.io/badge/DigiCats-NFT%20Game-purple?style=for-the-badge&logo=ethereum)
 ![Solidity](https://img.shields.io/badge/Solidity-0.8.20-blue?style=for-the-badge&logo=solidity)
 ![React](https://img.shields.io/badge/React-18.0-blue?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
@@ -28,7 +28,7 @@ This project demonstrates **advanced blockchain development skills** and impleme
 ## � **Key Features**
 
 ### Smart Contracts (Solidity)
-- **CryptoKitties.sol**: Main NFT contract with genetic breeding
+- **DigiCats.sol**: Main NFT contract with genetic breeding
 - **KittyMarketplace.sol**: Decentralized trading platform
 - **KittyBattle.sol**: Combat system with tournaments
 - **KittyStaking.sol**: Yield farming with rarity multipliers
@@ -73,8 +73,8 @@ This project demonstrates **advanced blockchain development skills** and impleme
 
 ```bash
 # Clone the repository
-git clone https://github.com/jamwal69/cryptokitties.git
-cd "Crypto Kitties"
+git clone https://github.com/jamwal69/DigiCats.git
+cd "DigiCats"
 
 # Install dependencies
 npm install
@@ -149,7 +149,7 @@ npm run frontend:start
 
 ## 📊 Smart Contract Details
 
-### CryptoKitties Contract
+### DigiCats Contract
 ```solidity
 // Core breeding function
 function breedKitties(uint256 parent1Id, uint256 parent2Id) external {
@@ -186,7 +186,7 @@ function calculateRewards(uint256 kittyId) public view returns (uint256) {
 npm run test
 
 # Run specific test files
-npx hardhat test test/CryptoKitties.test.ts
+npx hardhat test test/DigiCats.test.ts
 npx hardhat test test/KittyMarketplace.test.ts
 npx hardhat test test/KittyBattle.test.ts
 ```
@@ -219,9 +219,9 @@ npx hardhat test test/KittyBattle.test.ts
 ## 📁 Project Structure
 
 ```
-Crypto Kitties/
+DigiCats/
 ├── contracts/              # Smart contracts
-│   ├── CryptoKitties.sol
+│   ├── DigiCats.sol
 │   ├── KittyToken.sol
 │   ├── KittyMarketplace.sol
 │   ├── KittyBattle.sol

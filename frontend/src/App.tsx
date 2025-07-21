@@ -40,7 +40,7 @@ const App: React.FC = () => {
                 alignItems: 'center',
                 gap: '0.5rem'
               }}>
-                🐱 CryptoKitties
+                🐱 DigiCats
               </Link>
 
               {/* Navigation Links */}

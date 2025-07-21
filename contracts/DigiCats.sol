@@ -8,10 +8,10 @@ import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "./KittyToken.sol";
 
 /**
- * @title CryptoKitties
- * @dev Main NFT contract for CryptoKitties with advanced genetic system
+ * @title DigiCats
+ * @dev Main NFT contract for DigiCats with advanced genetic system
  */
-contract CryptoKitties is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
+contract DigiCats is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
     // Genetic trait ranges
     uint8 public constant BODY_COLOR_MAX = 7;      // 0-7 (8 variations)
     uint8 public constant EYE_COLOR_MAX = 5;       // 0-5 (6 variations)
@@ -75,7 +75,7 @@ contract CryptoKitties is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
     event KittyBred(uint256 indexed matronId, uint256 indexed sireId, uint256 indexed offspring);
     
     constructor(address _kittyTokenAddress) 
-        ERC721("CryptoKitties", "CK") 
+        ERC721("DigiCats", "DC") 
         Ownable(msg.sender) 
     {
         kittyToken = KittyToken(_kittyTokenAddress);

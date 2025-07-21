@@ -53,4 +53,4 @@ services:
 
 networks:
   default:
-    name: cryptokitties-network
+    name: digicats-network

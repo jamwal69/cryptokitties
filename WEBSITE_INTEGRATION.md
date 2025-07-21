@@ -1,14 +1,14 @@
 # 🌐 Portfolio Website Integration Guide
 
-## 🎯 **Adding CryptoKitties to Your Existing Website**
+## 🎯 **Adding DigiCats to Your Existing Website**
 
 ### **1. Project Showcase Section**
 
-#### **Hero Card for CryptoKitties**
+#### **Hero Card for DigiCats**
 ```html
 <div class="project-card featured">
   <div class="project-header">
-    <h3>🐱 CryptoKitties NFT Game</h3>
+    <h3>🐱 DigiCats NFT Game</h3>
     <div class="tech-stack">
       <span class="tech-badge blockchain">Solidity</span>
       <span class="tech-badge frontend">React</span>
@@ -18,10 +18,10 @@
   </div>
   
   <div class="project-preview">
-    <img src="./assets/cryptokitties-preview.png" alt="CryptoKitties Interface" />
+    <img src="./assets/DigiCats-preview.png" alt="DigiCats Interface" />
     <div class="overlay">
-      <a href="https://cryptokitties-demo.vercel.app" class="btn-demo">🚀 Live Demo</a>
-      <a href="https://github.com/yourusername/cryptokitties" class="btn-code">📖 View Code</a>
+      <a href="https://DigiCats-demo.vercel.app" class="btn-demo">🚀 Live Demo</a>
+      <a href="https://github.com/yourusername/DigiCats" class="btn-code">📖 View Code</a>
     </div>
   </div>
   
@@ -43,7 +43,7 @@
 
 #### **Option A: Dedicated Project Page**
 ```
-yourwebsite.com/projects/cryptokitties
+yourwebsite.com/projects/DigiCats
 ```
 
 #### **Option B: Portfolio Grid Enhancement**
@@ -52,16 +52,16 @@ yourwebsite.com/projects/cryptokitties
 <div class="project-grid">
   <!-- Your existing projects -->
   
-  <!-- NEW: CryptoKitties Project -->
+  <!-- NEW: DigiCats Project -->
   <div class="project-item featured blockchain">
     <div class="project-image">
-      <img src="./assets/cryptokitties-thumb.png" alt="CryptoKitties" />
+      <img src="./assets/DigiCats-thumb.png" alt="DigiCats" />
       <div class="project-overlay">
-        <h4>🐱 CryptoKitties NFT Game</h4>
+        <h4>🐱 DigiCats NFT Game</h4>
         <p>Advanced blockchain breeding game with genetic algorithms</p>
         <div class="project-links">
-          <a href="https://cryptokitties-demo.vercel.app" target="_blank">🚀 Demo</a>
-          <a href="https://github.com/yourusername/cryptokitties" target="_blank">📖 Code</a>
+          <a href="https://DigiCats-demo.vercel.app" target="_blank">🚀 Demo</a>
+          <a href="https://github.com/yourusername/DigiCats" target="_blank">📖 Code</a>
         </div>
       </div>
     </div>
@@ -87,8 +87,8 @@ yourwebsite.com/projects/cryptokitties
     <!-- NEW: Featured project highlight -->
     <div class="featured-work">
       <span class="featured-label">🌟 Featured Project:</span>
-      <a href="/projects/cryptokitties" class="featured-link">
-        🐱 CryptoKitties NFT Game - Advanced Blockchain Development
+      <a href="/projects/DigiCats" class="featured-link">
+        🐱 DigiCats NFT Game - Advanced Blockchain Development
       </a>
     </div>
     
@@ -139,19 +139,19 @@ yourwebsite.com/projects/cryptokitties
 #### **Modal/Popup Demo**
 ```html
 <!-- Add this button anywhere on your site -->
-<button class="demo-launcher" onclick="openCryptoKittiesDemo()">
-  🎮 Try CryptoKitties Demo
+<button class="demo-launcher" onclick="openDigiCatsDemo()">
+  🎮 Try DigiCats Demo
 </button>
 
 <!-- Modal for demo -->
 <div id="demo-modal" class="modal">
   <div class="modal-content">
     <div class="modal-header">
-      <h3>🐱 CryptoKitties Live Demo</h3>
-      <span class="close" onclick="closeCryptoKittiesDemo()">&times;</span>
+      <h3>🐱 DigiCats Live Demo</h3>
+      <span class="close" onclick="closeDigiCatsDemo()">&times;</span>
     </div>
     <div class="modal-body">
-      <iframe src="https://cryptokitties-demo.vercel.app" 
+      <iframe src="https://DigiCats-demo.vercel.app" 
               width="100%" 
               height="600px" 
               frameborder="0">
@@ -164,13 +164,13 @@ yourwebsite.com/projects/cryptokitties
 </div>
 
 <script>
-function openCryptoKittiesDemo() {
+function openDigiCatsDemo() {
   document.getElementById('demo-modal').style.display = 'block';
   // Analytics
-  gtag('event', 'demo_opened', {'event_category': 'cryptokitties'});
+  gtag('event', 'demo_opened', {'event_category': 'DigiCats'});
 }
 
-function closeCryptoKittiesDemo() {
+function closeDigiCatsDemo() {
   document.getElementById('demo-modal').style.display = 'none';
 }
 </script>
@@ -187,7 +187,7 @@ function closeCryptoKittiesDemo() {
     <li class="dropdown">
       <a href="/projects">Projects</a>
       <ul class="dropdown-menu">
-        <li><a href="/projects/cryptokitties">🐱 CryptoKitties (Featured)</a></li>
+        <li><a href="/projects/DigiCats">🐱 DigiCats (Featured)</a></li>
         <li><a href="/projects">All Projects</a></li>
       </ul>
     </li>
@@ -206,9 +206,9 @@ function closeCryptoKittiesDemo() {
     <div class="footer-section">
       <h4>🌟 Featured Work</h4>
       <ul>
-        <li><a href="/projects/cryptokitties">CryptoKitties NFT Game</a></li>
-        <li><a href="https://cryptokitties-demo.vercel.app">Live Demo</a></li>
-        <li><a href="https://github.com/yourusername/cryptokitties">Source Code</a></li>
+        <li><a href="/projects/DigiCats">DigiCats NFT Game</a></li>
+        <li><a href="https://DigiCats-demo.vercel.app">Live Demo</a></li>
+        <li><a href="https://github.com/yourusername/DigiCats">Source Code</a></li>
       </ul>
     </div>
     
@@ -245,7 +245,7 @@ function closeCryptoKittiesDemo() {
       <label for="project-interest">Interested in discussing a specific project?</label>
       <select id="project-interest" name="project-interest">
         <option value="">Select a project...</option>
-        <option value="cryptokitties">🐱 CryptoKitties NFT Game</option>
+        <option value="DigiCats">🐱 DigiCats NFT Game</option>
         <option value="general">General Discussion</option>
         <option value="collaboration">Collaboration Opportunity</option>
       </select>
@@ -262,7 +262,7 @@ function closeCryptoKittiesDemo() {
 ```html
 <head>
   <!-- Update your site's main meta description -->
-  <meta name="description" content="Full-stack blockchain developer specializing in Web3, smart contracts, and modern frontend development. Featured project: CryptoKitties NFT breeding game.">
+  <meta name="description" content="Full-stack blockchain developer specializing in Web3, smart contracts, and modern frontend development. Featured project: DigiCats NFT breeding game.">
   
   <!-- Add structured data -->
   <script type="application/ld+json">
@@ -285,8 +285,8 @@ function closeCryptoKittiesDemo() {
     ],
     "hasCredential": {
       "@type": "CreativeWork",
-      "name": "CryptoKitties NFT Game",
-      "url": "https://github.com/yourusername/cryptokitties"
+      "name": "DigiCats NFT Game",
+      "url": "https://github.com/yourusername/DigiCats"
     }
   }
   </script>
@@ -329,18 +329,18 @@ gtag('config', 'GA_MEASUREMENT_ID', {
   }
 });
 
-// Track CryptoKitties interactions
-function trackCryptoKittiesEvent(action) {
+// Track DigiCats interactions
+function trackDigiCatsEvent(action) {
   gtag('event', action, {
-    'event_category': 'cryptokitties_project',
+    'event_category': 'DigiCats_project',
     'event_label': 'portfolio_interaction'
   });
 }
 
 // Usage examples:
-// trackCryptoKittiesEvent('demo_click');
-// trackCryptoKittiesEvent('github_view');
-// trackCryptoKittiesEvent('project_page_view');
+// trackDigiCatsEvent('demo_click');
+// trackDigiCatsEvent('github_view');
+// trackDigiCatsEvent('project_page_view');
 ```
 
 ## 🚀 **Immediate Next Steps**

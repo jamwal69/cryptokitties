@@ -3,15 +3,15 @@ pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./CryptoKitties.sol";
+import "./DigiCats.sol";
 import "./KittyToken.sol";
 
 /**
  * @title KittyMarketplace
- * @dev Marketplace for trading CryptoKitties NFTs with fixed price and auction support
+ * @dev Marketplace for trading digiCats NFTs with fixed price and auction support
  */
 contract KittyMarketplace is ReentrancyGuard, Ownable {
-    CryptoKitties public cryptoKitties;
+    digiCats public digiCats;
     KittyToken public kittyToken;
     
     // Marketplace fee (2.5%)
@@ -101,8 +101,8 @@ contract KittyMarketplace is ReentrancyGuard, Ownable {
         uint256 finalPrice
     );
     
-    constructor(address _cryptoKittiesAddress, address _kittyTokenAddress) Ownable(msg.sender) {
-        cryptoKitties = CryptoKitties(_cryptoKittiesAddress);
+    constructor(address _digiCatsAddress, address _kittyTokenAddress) Ownable(msg.sender) {
+        digiCats = digiCats(_digiCatsAddress);
         kittyToken = KittyToken(_kittyTokenAddress);
     }
     
@@ -110,12 +110,12 @@ contract KittyMarketplace is ReentrancyGuard, Ownable {
      * @dev List a kitty for fixed price sale
      */
     function listKitty(uint256 tokenId, uint256 price) external nonReentrant {
-        require(cryptoKitties.ownerOf(tokenId) == msg.sender, "Not the owner");
+        require(digiCats.ownerOf(tokenId) == msg.sender, "Not the owner");
         require(!isListed[tokenId] && !isAuctioned[tokenId], "Already listed or auctioned");
         require(price > 0, "Price must be greater than 0");
         require(
-            cryptoKitties.isApprovedForAll(msg.sender, address(this)) ||
-            cryptoKitties.getApproved(tokenId) == address(this),
+            digiCats.isApprovedForAll(msg.sender, address(this)) ||
+            digiCats.getApproved(tokenId) == address(this),
             "Marketplace not approved"
         );
         
@@ -177,7 +177,7 @@ contract KittyMarketplace is ReentrancyGuard, Ownable {
         );
         
         // Transfer NFT
-        cryptoKitties.safeTransferFrom(listing.seller, msg.sender, tokenId);
+        digiCats.safeTransferFrom(listing.seller, msg.sender, tokenId);
         
         // Update listing state
         listings[tokenId].active = false;
@@ -211,15 +211,15 @@ contract KittyMarketplace is ReentrancyGuard, Ownable {
         uint256 duration,
         uint256 minBidIncrement
     ) external nonReentrant {
-        require(cryptoKitties.ownerOf(tokenId) == msg.sender, "Not the owner");
+        require(digiCats.ownerOf(tokenId) == msg.sender, "Not the owner");
         require(!isListed[tokenId] && !isAuctioned[tokenId], "Already listed or auctioned");
         require(startingPrice > 0, "Starting price must be greater than 0");
         require(reservePrice >= startingPrice, "Reserve price too low");
         require(duration >= 1 hours && duration <= 7 days, "Invalid auction duration");
         require(minBidIncrement > 0, "Min bid increment must be greater than 0");
         require(
-            cryptoKitties.isApprovedForAll(msg.sender, address(this)) ||
-            cryptoKitties.getApproved(tokenId) == address(this),
+            digiCats.isApprovedForAll(msg.sender, address(this)) ||
+            digiCats.getApproved(tokenId) == address(this),
             "Marketplace not approved"
         );
         
@@ -308,7 +308,7 @@ contract KittyMarketplace is ReentrancyGuard, Ownable {
             );
             
             // Transfer NFT to winner
-            cryptoKitties.safeTransferFrom(auction.seller, auction.currentBidder, tokenId);
+            digiCats.safeTransferFrom(auction.seller, auction.currentBidder, tokenId);
             
             // Record sale
             Sale memory sale = Sale({

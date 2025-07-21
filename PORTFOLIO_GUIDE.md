@@ -7,7 +7,7 @@
 #### **Hero Section**
 ```html
 <section class="hero-project">
-  <h1>🐱 CryptoKitties NFT Game</h1>
+  <h1>🐱 DigiCats NFT Game</h1>
   <p class="lead">Advanced blockchain breeding game with genetic algorithms</p>
   
   <div class="project-badges">
@@ -19,10 +19,10 @@
   </div>
   
   <div class="project-links">
-    <a href="https://cryptokitties-demo.vercel.app" class="btn-primary">
+    <a href="https://DigiCats-demo.vercel.app" class="btn-primary">
       🚀 Live Demo
     </a>
-    <a href="https://github.com/jamwal69/cryptokitties" class="btn-secondary">
+    <a href="https://github.com/jamwal69/DigiCats" class="btn-secondary">
       📖 View Code
     </a>
   </div>
@@ -33,7 +33,7 @@
 ```markdown
 ### 🌟 Project Highlights
 
-**CryptoKitties** is a comprehensive blockchain-based NFT breeding game that demonstrates advanced smart contract development, complex genetic algorithms, and modern Web3 frontend integration.
+**DigiCats** is a comprehensive blockchain-based NFT breeding game that demonstrates advanced smart contract development, complex genetic algorithms, and modern Web3 frontend integration.
 
 **🎯 Problem Solved**: Created a complete NFT ecosystem with breeding mechanics, marketplace functionality, and gamification elements.
 
@@ -55,9 +55,9 @@
 
 #### **Repository Structure**
 ```
-cryptokitties-nft-game/
+DigiCats-nft-game/
 ├── 📁 contracts/               # Smart contracts
-│   ├── CryptoKitties.sol      # Main NFT contract
+│   ├── DigiCats.sol      # Main NFT contract
 │   ├── KittyMarketplace.sol   # Trading platform
 │   └── ...
 ├── 📁 frontend/               # React application
@@ -90,7 +90,7 @@ ci: add automated deployment pipeline
 #### **Demo Script** (2-3 minutes)
 ```markdown
 1. **Introduction** (30s)
-   "This is CryptoKitties, a blockchain NFT game I built with advanced genetic algorithms"
+   "This is DigiCats, a blockchain NFT game I built with advanced genetic algorithms"
 
 2. **Connect Wallet** (30s)
    "First, I'll connect MetaMask to the Sepolia testnet"
@@ -141,7 +141,7 @@ ci: add automated deployment pipeline
 
 #### **30-Second Elevator Pitch**
 ```
-"I built CryptoKitties, a complete blockchain NFT game with genetic breeding algorithms. 
+"I built DigiCats, a complete blockchain NFT game with genetic breeding algorithms. 
 Users can mint, breed, and trade unique digital cats. Each kitty has DNA that determines 
 appearance and battle stats. The smart contracts implement complex genetic inheritance 
 with 45% from each parent plus 10% mutations. Built with Solidity, React, and TypeScript."
@@ -192,7 +192,7 @@ with 45% from each parent plus 10% mutations. Built with Solidity, React, and Ty
 
 #### **LinkedIn Post**
 ```
-🚀 Excited to share my latest project: CryptoKitties NFT Game!
+🚀 Excited to share my latest project: DigiCats NFT Game!
 
 Built a complete blockchain ecosystem featuring:
 🧬 Genetic breeding algorithms
@@ -214,7 +214,7 @@ Key achievements:
 ```
 🧵 Thread: Building a complex blockchain NFT game
 
-1/8 Just launched CryptoKitties - a breeding game with genetic algorithms! 🐱
+1/8 Just launched DigiCats - a breeding game with genetic algorithms! 🐱
 
 2/8 Technical challenge: Implementing 45%/45%/10% trait inheritance in Solidity
 

@@ -10,8 +10,8 @@
 - [ ] Browser dev tools ready for technical audience
 
 ### **Demo Environment URLs**
-- **Live Demo**: `https://cryptokitties-demo.vercel.app`
-- **GitHub Repo**: `https://github.com/jamwal69/cryptokitties`
+- **Live Demo**: `https://DigiCats-demo.vercel.app`
+- **GitHub Repo**: `https://github.com/jamwal69/DigiCats`
 - **Contract Explorer**: `https://sepolia.etherscan.io/address/0xba9847de247D2930bc8CFD9CfB26fa4e3b93cF59`
 
 ## 🎭 **Demo Scripts by Audience**
@@ -20,13 +20,13 @@
 
 ```markdown
 **Opening** (30s)
-"I'd like to show you CryptoKitties, a complete blockchain NFT game I built. 
+"I'd like to show you DigiCats, a complete blockchain NFT game I built. 
 It demonstrates advanced smart contract development, genetic algorithms, 
 and modern Web3 frontend integration."
 
 **Technical Architecture** (60s)
 "The system consists of 5 interconnected smart contracts deployed on Sepolia:
-- CryptoKitties: Main NFT contract with genetic breeding
+- DigiCats: Main NFT contract with genetic breeding
 - Marketplace: Decentralized trading with auctions
 - Battle: Turn-based combat system
 - Staking: Yield farming with rarity multipliers
@@ -60,7 +60,7 @@ The frontend uses React with TypeScript and Ethers.js v6 for Web3 integration."
 
 ```markdown
 **Project Overview** (30s)
-"CryptoKitties showcases my blockchain development expertise through 
+"DigiCats showcases my blockchain development expertise through 
 a complete NFT ecosystem with breeding, trading, and gaming mechanics."
 
 **Problem & Solution** (30s)
@@ -81,7 +81,7 @@ Infrastructure: Docker containerization with CI/CD pipeline"
 
 ```markdown
 **What It Is** (20s)
-"This is a blockchain game where players collect, breed, and trade unique digital cats called CryptoKitties."
+"This is a blockchain game where players collect, breed, and trade unique digital cats called DigiCats."
 
 **Why It's Impressive** (20s)
 "Each kitty is an NFT with unique genetics. The breeding system uses complex algorithms 
@@ -168,8 +168,8 @@ contract.on('Birth', (owner, kittyId, matronId, sireId) => {
 ### **Local Development Demo**
 ```bash
 # 1. Clone and setup
-git clone https://github.com/jamwal69/cryptokitties
-cd cryptokitties
+git clone https://github.com/jamwal69/DigiCats
+cd DigiCats
 npm install
 
 # 2. Start local blockchain (optional)
@@ -188,7 +188,7 @@ npm start
 ### **Production Demo**
 ```bash
 # Already deployed and ready!
-# Just visit: https://cryptokitties-demo.vercel.app
+# Just visit: https://DigiCats-demo.vercel.app
 ```
 
 ### **Docker Demo**
@@ -243,7 +243,7 @@ docker-compose up --build
 
 ### **Recording Script**
 ```markdown
-"Hi, I'm [Name] and this is CryptoKitties, a blockchain NFT game I built.
+"Hi, I'm [Name] and this is DigiCats, a blockchain NFT game I built.
 
 [Show wallet connection]
 First, I connect MetaMask to interact with the smart contracts.
@@ -282,4 +282,4 @@ Thanks for watching!"
 - **Peer Recognition**: Other developers star or share the project
 - **Interview Advancement**: Demo leads to next interview round
 
-This comprehensive demo setup ensures you can effectively showcase your CryptoKitties project to any audience, from technical interviews to portfolio reviews! 🚀
+This comprehensive demo setup ensures you can effectively showcase your DigiCats project to any audience, from technical interviews to portfolio reviews! 🚀

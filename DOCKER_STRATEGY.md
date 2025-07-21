@@ -78,7 +78,7 @@ services:
 #### **Vercel + Docker** 
 ```bash
 # Automatic deployment from GitHub
-# Professional domain: cryptokitties.yourdomain.com
+# Professional domain: DigiCats.yourdomain.com
 # Perfect for React apps
 ```
 **Benefits**: 
@@ -176,8 +176,8 @@ services:
 docker-compose up --build
 
 # Production deployment
-docker build -t cryptokitties .
-docker run -p 3000:3000 cryptokitties
+docker build -t DigiCats .
+docker run -p 3000:3000 DigiCats
 ```
 
 ### Cloud Deployment
@@ -240,8 +240,8 @@ services:
 ### **Quick Demo Setup**
 ```bash
 # 1. Clone repository
-git clone https://github.com/jamwal69/cryptokitties
-cd cryptokitties
+git clone https://github.com/jamwal69/DigiCats
+cd DigiCats
 
 # 2. One-command start
 docker-compose up --build
@@ -253,18 +253,18 @@ open http://localhost:3000
 ### **Production Deployment**
 ```bash
 # 1. Build production image  
-docker build -t cryptokitties:latest .
+docker build -t DigiCats:latest .
 
 # 2. Run with production config
 docker run -d \
-  --name cryptokitties-prod \
+  --name DigiCats-prod \
   -p 3000:3000 \
   --env-file .env.production \
   --restart unless-stopped \
-  cryptokitties:latest
+  DigiCats:latest
 
 # 3. Verify deployment
-docker logs cryptokitties-prod
+docker logs DigiCats-prod
 curl -f http://localhost:3000/health
 ```
 

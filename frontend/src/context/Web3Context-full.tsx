@@ -2,8 +2,8 @@ import React, { createContext, useContext, useState, useEffect, ReactNode, useCa
 import { BrowserProvider, Contract } from 'ethers';
 import addresses from '../contracts/addresses.json';
 
-// CryptoKitties ABI - matching the actual deployed contract
-const CRYPTO_KITTIES_ABI = [
+// DigiCats ABI - matching the actual deployed contract
+const DIGI_CATS_ABI = [
   "function balanceOf(address owner) view returns (uint256)",
   "function ownerOf(uint256 tokenId) view returns (address)",
   "function getKitty(uint256 tokenId) external view returns (tuple(uint256 tokenId, uint8 generation, uint256 birthTime, uint256 lastBreedTime, uint256 matronId, uint256 sireId, uint8 bodyColor, uint8 eyeColor, uint8 pattern, uint8 accessory, uint8 background, bool hasSpecialTrait, uint16 strength, uint16 agility, uint16 intelligence))",
@@ -109,18 +109,18 @@ export const Web3Provider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
 
       const signer = await web3Provider.getSigner();
-      const cryptoKittiesContract = new Contract(
-        addresses.CryptoKitties,
-        CRYPTO_KITTIES_ABI,
+      const digiCatsContract = new Contract(
+        addresses.DigiCats,
+        DIGI_CATS_ABI,
         signer
       );
 
       setAccount(accounts[0]);
       setProvider(web3Provider);
-      setContract(cryptoKittiesContract);
+      setContract(digiCatsContract);
 
       console.log('✅ Wallet connected:', accounts[0]);
-      console.log('✅ Contract address:', addresses.CryptoKitties);
+      console.log('✅ Contract address:', addresses.DigiCats);
       
     } catch (error) {
       console.error('Failed to connect wallet:', error);
@@ -194,7 +194,7 @@ export const Web3Provider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     try {
       console.log('🧪 Testing contract connection...');
-      console.log('📍 Contract address:', addresses.CryptoKitties);
+      console.log('📍 Contract address:', addresses.DigiCats);
       console.log('👤 Account:', account);
       
       // Test basic contract calls
@@ -226,7 +226,7 @@ export const Web3Provider: React.FC<{ children: ReactNode }> = ({ children }) =>
         owner: contractOwner,
         userAddress: account,
         isOwner: account.toLowerCase() === contractOwner.toLowerCase(),
-        contractAddress: addresses.CryptoKitties
+        contractAddress: addresses.DigiCats
       };
       
       alert(`✅ Contract Test Results:

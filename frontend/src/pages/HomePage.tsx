@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600 mb-4">
-              CryptoKitties
+              DigiCats
             </h1>
             <p className="text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Collect, breed, and battle unique digital cats on the blockchain. 
@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Your Kitties</h2>
             <p className="text-xl text-gray-600">
-              You own {userKitties.length} unique CryptoKitties
+              You own {userKitties.length} unique DigiCats
             </p>
           </div>
           
@@ -95,7 +95,7 @@ const HomePage: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Game Features</h2>
             <p className="text-xl text-gray-600">
-              Discover all the amazing things you can do with your CryptoKitties
+              Discover all the amazing things you can do with your DigiCats
             </p>
           </div>
           
